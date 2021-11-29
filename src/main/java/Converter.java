@@ -23,6 +23,16 @@ public class Converter {
                 }
             }
         }
+
+        if (fahrenheit != null){
+            for (char flag : convertFlags) {
+                if (flag == 'c'){
+                    fahrenheitToCelsius();
+                } else if (flag == 'k'){
+                    fahrenheitToKelvin();
+                }
+            }
+        }
     }
 
     private void celsiusToFahrenheit(){
@@ -32,6 +42,16 @@ public class Converter {
 
     private void celsiusToKelvin(){
         double value = celsius + 273.15;
+        System.out.println(String.format("Kelvin value: %.3f",value));
+    }
+
+    private void fahrenheitToCelsius(){
+        double value = 5 * (fahrenheit - 32) / 9;
+        System.out.println(String.format("Celsius value: %.3f",value));
+    }
+
+    private void fahrenheitToKelvin(){
+        double value = 5 * (fahrenheit - 32) / 9 + 273.15;
         System.out.println(String.format("Kelvin value: %.3f",value));
     }
 }
