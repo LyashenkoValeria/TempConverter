@@ -21,6 +21,7 @@ public class ConverterApp {
             }
 
             Converter converter = new Converter(celsius, fahrenheit, kelvin, commandParts[2]);
+            converter.result();
         } catch (IOException e){
             System.out.println("Error reading input data");
         }
