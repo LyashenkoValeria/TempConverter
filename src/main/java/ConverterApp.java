@@ -14,7 +14,7 @@ public class ConverterApp {
 
             if (command.equals("-help")) {
                 help();
-                System.out.println("\nEnter your command:");
+                System.out.println("\n\nEnter your command:");
                 command = reader.readLine();
             }
 
@@ -28,7 +28,7 @@ public class ConverterApp {
 
             Converter converter = new Converter(celsius, fahrenheit, kelvin, commandParts[2]);
             converter.result();
-        } catch (IOException e){
+        } catch (Exception e){
             System.out.println("Error reading input data. Call -help to learn about service");
         }
     }

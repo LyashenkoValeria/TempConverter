@@ -38,7 +38,7 @@ public class Converter {
             for (char flag : convertFlags) {
                 if (flag == 'c'){
                     kelvinToCelsius();
-                } else if (flag == 'k'){
+                } else if (flag == 'f'){
                     kelvinToFahrenheit();
                 }
             }
