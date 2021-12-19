@@ -7,6 +7,10 @@ public class ConverterApp {
     private static Double kelvin = null;
 
     public static void main(String[] args) {
+        launch();
+    }
+
+    public static void launch(){
         try {
             System.out.println("Enter the command or use -help:");
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
