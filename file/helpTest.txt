@@ -1,0 +1,15 @@
+Enter the command or use -help:
+The converter supports three types of temperature:
+-c - Celsius;
+-f - Fahrenheit;
+-k - Kelvin.
+To get the result, enter one of the three flags and a number, then write one or two values to which you want to convert the original value.
+Example:
+-c 40 fk.
+Result:
+Fahrenheit value: 104,000
+Kelvin value: 313,150
+
+Enter your command:
+Fahrenheit value: 104,000
+Kelvin value: 313,150
