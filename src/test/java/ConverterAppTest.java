@@ -1,15 +1,17 @@
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class ConverterAppTest {
 
     ByteArrayOutputStream output = new ByteArrayOutputStream();
 
-    @Before
+    @BeforeEach
     public void outputToStream() {
         System.setOut(new PrintStream(output));
     }
@@ -23,7 +25,7 @@ public class ConverterAppTest {
         try(FileReader fileReader = new FileReader("."+File.separator+"file"+File.separator+"helpTest.txt"))
         {
             BufferedReader reader = new BufferedReader(fileReader);
-        Assert.assertTrue(comparison(reader,consoleOut));
+        assertTrue(comparison(reader,consoleOut));
         }
         catch(IOException e){
             System.out.println("Test file not found");
@@ -49,7 +51,7 @@ public class ConverterAppTest {
         String[] answer = {"Enter the command or use -help:", "Kelvin value: 378,706", "Celsius value: 105,556"};
         ConverterApp.launch();
         String[] consoleOut = output.toString().split("\r\n");
-        Assert.assertArrayEquals(answer, consoleOut);
+        assertArrayEquals(answer, consoleOut);
     }
 
     @Test
@@ -60,6 +62,6 @@ public class ConverterAppTest {
         String[] answer = {"Enter the command or use -help:", "Error reading input data. Call -help to learn about service"};
         ConverterApp.launch();
         String[] consoleOut = output.toString().split("\r\n");
-        Assert.assertArrayEquals(answer, consoleOut);
+        assertArrayEquals(answer, consoleOut);
     }
 }
