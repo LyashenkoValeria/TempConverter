@@ -6,6 +6,7 @@
 `develop`
 
 ![develop_branch_testing](https://github.com/LyashenkoValeria/TempConverter/actions/workflows/test_ci.yml/badge.svg?branch=develop)
+
 В результате выполнения лабораторной работы был создан сервис, 
 который может конвертировать температуру заданную в одной из трёх величин: Цельсия, Фаренгейты, Кельвины.
 ## Задачи
